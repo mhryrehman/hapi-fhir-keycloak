@@ -13,6 +13,8 @@
 		<spring_boot_version>2.4.1</spring_boot_version>
 		<spotless.version>2.12.1</spotless.version>
 	</properties>
+	
+	
 	<dependencies>
 		<!-- Compile dependencies -->
 
@@ -44,17 +46,12 @@
 	</dependencies>
 
 	<distributionManagement>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<name>Nexus Snapshots Repository</name>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<uniqueVersion>false</uniqueVersion>
-		</snapshotRepository>
-		<repository>
-			<id>nexus-releases</id>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-		</repository>
-	</distributionManagement>
+    <repository>
+        <id>github-packages</id>
+        <name>GitHub Packages</name>
+        <url>https://maven.pkg.github.com/mhryrehman/hapi-fhir-keycloak</url>
+    </repository>
+</distributionManagement>
 
 	<dependencyManagement>
 		<dependencies>
